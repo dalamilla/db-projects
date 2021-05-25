@@ -1,4 +1,4 @@
-# Database Projects
+# Database Practice Projects
 
 A collection of Database (SQL, NoSQL) projects to improving your skills.
 
