@@ -1,0 +1,17 @@
+HGET user:1 password
+
+HMGET user:1 first_name last_name email
+
+HGETALL user:1:contact:1
+
+HGETALL user:1:contact:1:address
+
+HGETALL user:1:contact:1:phones
+
+HSET user:1:contact:1:phones work "5555347689"
+
+HDEL user:1:contact:1:phones mobile
+
+HGETALL user:2:contact:2:emails
+
+HDEL user:2:contact:2:emails mobile
