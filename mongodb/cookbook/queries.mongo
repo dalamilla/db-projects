@@ -1,0 +1,30 @@
+// Cookbook Database Data
+// Version 0.1
+
+// select _id and password with email
+
+db.chef.find({email: ""}, {_id: 1, password: 1})
+
+// select chef information except password
+
+db.chef.find({email: ""}, {password: 0})
+
+// select recipes with email of chef
+
+db.recipe.find({autor_email: ""})
+
+// select chefs information and recipes
+
+db.chef.aggregate([{ $lookup: {from: "recipe", localField: "email", foreignField: "autor_email", as: "recipes"}}])
+
+// select chef information and recipes with email
+
+db.chef.aggregate([{ $lookup: {from: "recipe",localField: "email", foreignField: "autor_email", as: "recipes"}}, { $match : { mail : "" } }])
+
+// remove recipes with email
+
+db.recipe.remove({autor_email: ""})
+
+// update password
+
+db.chef.update({email: ""}, {$set: {"password": ""}})

@@ -1,0 +1,38 @@
+// Address Book Database Queries
+// Version 0.1
+
+// select _id and password with email
+
+db.users.find({email: ""}, {_id: 1, password: 1})
+
+// select data except password  and contacts with email
+
+db.users.find({email: ""}, {contacts: 0, password: 0})
+
+// select basic information contacts with email
+
+db.users.find({email: ""}, {"contacts.first_name": 1, "contacts.last_name": 1, "contacts.birth_date": 1, "contacts.avatar_url": 1})
+
+// select name, lastname and address contacts information with email
+
+ db.users.find({email: ""}, {"contacts.first_name": 1, "contacts.last_name": 1, "contacts.address": 1, "contacts.city": 1, "contacts.country": 1, "contacts.postal_code": 1})
+
+// select name, lastname and phone contacts information with email
+
+db.users.find({email: ""}, {"contacts.first_name": 1, "contacts.last_name": 1, "contacts.phones": 1})
+
+// select name, lastname and email contacts information with email
+
+db.users.find({email: ""}, {"contacts.first_name": 1, "contacts.last_name": 1, "contacts.emails": 1})
+
+// remove work email from contact information with email
+
+db.users.update({email: "", "contacts.first_name": ""}, {$pull: {"contacts.$.emails": {"type":"work"}}})
+
+// update last name from contact
+
+db.users.update({email: "", "contacts.first_name": ""}, {$set: {"contacts.$.last_name": ""}})
+
+// update number from phone of some contact
+
+db.users.update({email: ""}, {$set: {"contacts.$[cont].phones.$[phon].number": ""}}, {arrayFilters: [{"cont.first_name": ""},{"phon.type": "work"}]})
