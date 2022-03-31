@@ -1,6 +1,6 @@
 # Database Projects
 
-A list of simple DB(SQL or NoSQL) projects.
+A list of Database(SQL or NoSQL) projects.
 
 
 ## Projects
