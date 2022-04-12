@@ -1,15 +1,11 @@
 # Database Projects
 
-A list of Database(SQL or NoSQL) projects.
+A list of projects implemented on multiple Database Management System(SQL or NoSQL).
 
+## DMS
 
-## Projects
-
-|  #  | Name                               | Description                                              |
-| ----| -----------------------------------| ---------------------------------------------------------|
-|  01 | [Address book]()                   | Design and create an address book database.              |
-|  02 | [Cookbook]()                       | Design and create a cookbook database.                   |
-|  03 | [Vinyl Collection]()               | Design and create a vinyl collection database.           |
-|  04 | [Museum Checklist]()               | Design and create a museum checklist database.           |
-|  05 | [Shopping List]()                  | Design and create a Shopping list database.              |
-|  06 | [Quidditch Tournament]()           | Design and create a database for a quidditch tournament. |
+|  #  | Name                               | Description                                                                                                                                 |
+| ----| -----------------------------------| --------------------------------------------------------------------------------------------------------------------------------------------|
+|  01 | [MariaDB](./mariadb/README.md)     | A community-developed, commercially supported fork of the MySQL relational database management system (RDBMS).                              |
+|  02 | [MongoDB](./mongodb/README.md)     | A source-available cross-platform document-oriented database program.                                                                       |
+|  03 | [Redis](./redis/README.md)         | An in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability. |
