@@ -1,0 +1,3 @@
+*.sql text eol=lf
+*.mongodb text eol=lf
+*.redis text eol=lf
